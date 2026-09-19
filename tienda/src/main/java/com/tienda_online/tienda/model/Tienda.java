@@ -25,7 +25,7 @@ public class Tienda{
     private String producto;
     @Column (name="nombre_usuario")
     private String nombreUsuario;
-    @Column (name="roles")
+    @Column (name="roles_usuario")
     private String roles;
     @Column (name="direccion_despacho")
     private String direccionDespacho;

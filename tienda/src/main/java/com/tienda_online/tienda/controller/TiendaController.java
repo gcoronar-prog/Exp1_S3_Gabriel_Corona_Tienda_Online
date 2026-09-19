@@ -38,7 +38,7 @@ public class TiendaController {
     }
     
     //retorno de datos segun numero de compra
-    @PostMapping 
+    @PostMapping
     public Tienda createRegistroTienda(@RequestBody Tienda tienda){
         return tiendaService.createRegistroTienda(tienda);
     }
