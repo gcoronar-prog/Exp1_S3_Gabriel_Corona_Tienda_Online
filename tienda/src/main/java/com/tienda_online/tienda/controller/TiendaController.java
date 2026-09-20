@@ -46,12 +46,12 @@ public class TiendaController {
     }
     
     @PutMapping ("/{idUsuario}")
-    public Tienda updateRegistroTienda(@Valid @PathVariable Long idUsuario, @RequestBody Tienda tienda){
+    public Tienda updateRegistroTienda( @PathVariable Long idUsuario, @Valid @RequestBody Tienda tienda){
         return tiendaService.updateRegistroTienda(idUsuario, tienda);
     }
 
     @DeleteMapping ("/{idUsuario}")
-    public void deleteRegistroTienda(@PathVariable Long idUsuario){
+    public void deleteRegistroTienda(@Valid @PathVariable Long idUsuario){
         tiendaService.deleteRegistroTienda(idUsuario);
     }
 }
