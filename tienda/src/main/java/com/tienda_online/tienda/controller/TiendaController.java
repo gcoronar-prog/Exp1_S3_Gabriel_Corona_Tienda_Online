@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tienda_online.tienda.model.Tienda;
 import com.tienda_online.tienda.services.TiendaService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping ("/tienda")
 public class TiendaController {
@@ -39,12 +41,12 @@ public class TiendaController {
     
     //retorno de datos segun numero de compra
     @PostMapping
-    public Tienda createRegistroTienda(@RequestBody Tienda tienda){
+    public Tienda createRegistroTienda(@Valid @RequestBody Tienda tienda){
         return tiendaService.createRegistroTienda(tienda);
     }
     
     @PutMapping ("/{idUsuario}")
-    public Tienda updateRegistroTienda(@PathVariable Long idUsuario, @RequestBody Tienda tienda){
+    public Tienda updateRegistroTienda(@Valid @PathVariable Long idUsuario, @RequestBody Tienda tienda){
         return tiendaService.updateRegistroTienda(idUsuario, tienda);
     }
 
