@@ -1,5 +1,7 @@
 package com.tienda_online.tienda.model;
 
+import java.time.LocalDate;
+
 import org.junit.jupiter.api.Test;
 
 class TiendaModelTest {
@@ -15,6 +17,9 @@ class TiendaModelTest {
         tienda.setDireccionDespacho("Calle Falsa 123");
         tienda.setApellidoUsuario("Pérez");
         tienda.setRegionDespacho("Región Metropolitana");
+        tienda.setComunaDespacho("Estacion Central");
+        tienda.setFechaCompra(LocalDate.of(1990, 1, 1));
+
         assert tienda.getIdUsuario().equals(1L);
         assert tienda.getNumeroCompra().equals("C0001");
         assert tienda.getProductos().equals("Producto A");
@@ -23,6 +28,7 @@ class TiendaModelTest {
         assert tienda.getDireccionDespacho().equals("Calle Falsa 123");
         assert tienda.getApellidoUsuario().equals("Pérez");
         assert tienda.getRegionDespacho().equals("Región Metropolitana");
-
+        assert tienda.getComunaDespacho().equals("Estacion Central");
+        assert tienda.getFechaCompra().equals(LocalDate.of(1990, 1,1));
     }
 }
